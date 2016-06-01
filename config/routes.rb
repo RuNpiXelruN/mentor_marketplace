@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'homepage/show'
+
   root 'landing_page#show'
 
   devise_for :users
