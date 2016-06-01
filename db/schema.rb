@@ -11,7 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160601012949) do
+ActiveRecord::Schema.define(version: 20160601030000) do
+
+  create_table "mentees", force: :cascade do |t|
+    t.text     "bio"
+    t.string   "company_name"
+    t.integer  "no_of_employees"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "mentoring_relationships", force: :cascade do |t|
+    t.integer  "mentor_id"
+    t.integer  "mentee_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["mentee_id"], name: "index_mentoring_relationships_on_mentee_id"
+    t.index ["mentor_id"], name: "index_mentoring_relationships_on_mentor_id"
+  end
+
+  create_table "mentors", force: :cascade do |t|
+    t.text     "bio"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false

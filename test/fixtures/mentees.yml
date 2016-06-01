@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bio: MyText
+  company_name: MyString
+  no_of_employees: 1
+
+two:
+  bio: MyText
+  company_name: MyString
+  no_of_employees: 1

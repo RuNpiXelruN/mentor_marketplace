@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'mentors/index'
+
+  get 'mentors/new'
+
+  get 'mentors/show'
+
+  get 'mentors/edit'
+
+  get 'mentors/update'
+
+  get 'mentors/destroy'
+
+  get 'mentors/create'
+
   get 'homepage/show'
 
   root 'landing_page#show'
